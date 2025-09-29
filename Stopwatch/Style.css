@@ -1,0 +1,101 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1
+{
+    font-size: 3.4rem;
+    color: white;
+}
+
+.main-container
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 100px;
+    background-color: hsl(0, 0%, 0%);
+    background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    background-size: 45px 45px; /* Adjust spacing here */
+}
+
+.container{
+    height: 350px;
+    width: 600px;
+    background-color: pink;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgBa(30, 30, 30, 1);
+    border: 2px solid hsl(0,0%,30%);
+   box-shadow: 0 0px 100px rgb(0, 81, 255,0.5);
+
+    
+}
+
+#nums
+{
+    font-size: 5em;
+    color: white;
+     text-shadow: 0 0 40px gold;
+}
+
+.controls button
+{
+    padding: 10px 20px;
+    font-size: 1.7em;
+    border-radius: 30px;
+    border: none;
+    background-color: hsl(0, 0%, 80%);
+    cursor: pointer;
+    margin: 15px;
+    font-weight: bold;
+}
+
+button:active
+{
+    background-color: hsl(0, 0%, 50%);
+    transition: 0 0.5 ease;
+}
+
+#startbtn
+{
+    color: green;
+}
+
+#startbtn:hover
+{
+    box-shadow: 0 0 80px hsl(120, 100%, 50%);
+}
+
+#stopbtn
+{
+    color: Red;
+}
+
+#stopbtn:hover
+{
+    box-shadow: 0 0 100px hsl(0, 100%, 50%);
+}
+
+
+#resetbtn
+{
+    color: blue;
+}
+
+#resetbtn:hover
+{
+    box-shadow: 0 0 80px hsl(240, 100%, 30%);
+}
+
+    
