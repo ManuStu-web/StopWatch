@@ -52,5 +52,21 @@
     text-shadow:0 0 50px #ffbf00 ;
 }
 
+@media (max-width: 600px) {
+    #time {
+        width: 90%; /* Take up most of the screen width */
+        height: 120px;
+        border-radius: 10px;
+        /* Reduce shadow intensity for mobile performance/look */
+        box-shadow: 
+            0 0 5px rgba(0, 255, 0, 0.5), 
+            0 0 25px rgba(0, 255, 0, 0.3);
+    }
+
+    #display {
+        font-size: 3em; /* Smaller font for mobile readability */
+    }
+}
+
 
 
