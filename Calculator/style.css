@@ -131,39 +131,61 @@ button
 }
 
 @media (max-width: 600px) {
-    /* Ensure body centering is perfect and overflow is managed */
+    
+    /* Global Mobile Fixes */
     body {
-        /* Allow content to scroll if necessary, though it shouldn't for this design */
         overflow-y: auto; 
     }
-
+    
     .calculator {
-        /* Restrict max width to ensure it takes up less than 100% of the viewport */
-        width: 95%; 
-        max-width: 350px; /* Set a reasonable maximum size for smaller tablets */
-        margin: 20px 0; /* Add some margin top/bottom to prevent sticking to edges */
+        /* Use a width that always leaves some margin on the sides */
+        width: 90%; 
+        max-width: 350px; 
+        margin: 20px auto; /* Ensure it's vertically and horizontally centered if content is short */
     }
 
     #display {
-        /* Significantly reduce the font size for mobile readability */
+        /* Reduce padding slightly and ensure font is readable */
         font-size: 2.5rem; 
-        padding: 15px;
+        padding: 10px 15px;
     }
 
     #keys {
-        /* Reduce padding inside the keys container */
+        /* Reduce padding around the key container */
         padding: 15px;
-        /* Reduce the space between buttons */
-        gap: 10px; 
+        /* Increase gap slightly for visual separation */
+        gap: 12px; 
+        /* The grid template remains 4 columns, which is fine */
     }
 
     button {
-        /* Reduce button size to fit 4 across a narrower screen */
-        width: 65px; 
-        height: 65px;
-        border-radius: 32.5px;
+        /* Remove fixed width/height and use aspect-ratio instead for square buttons */
+        width: 100%; /* Important: Let the grid manage the width */
+        height: auto;
+        aspect-ratio: 1 / 1; /* Makes the button perfectly square */
+        
         /* Reduce button font size */
-        font-size: 1.5rem; 
+        font-size: 1.4rem; 
+        border-radius: 50%; /* Ensure it's a perfect circle */
+    }
+    
+    /* Fix the ugly blue tap highlight and prevent text selection */
+    * {
+        -webkit-tap-highlight-color: transparent; 
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; 
+    }
+}
+
+/* Optional: Even smaller screen adjustment (e.g., iPhone SE) */
+@media (max-width: 350px) {
+     button {
+        font-size: 1.2rem; 
+    }
+    #display {
+        font-size: 2rem;
     }
 }
 
