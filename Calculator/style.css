@@ -130,4 +130,40 @@ button
     box-shadow: 0 0 30px  hsl(0, 0%, 20%) ;
 }
 
+@media (max-width: 600px) {
+    /* Ensure body centering is perfect and overflow is managed */
+    body {
+        /* Allow content to scroll if necessary, though it shouldn't for this design */
+        overflow-y: auto; 
+    }
+
+    .calculator {
+        /* Restrict max width to ensure it takes up less than 100% of the viewport */
+        width: 95%; 
+        max-width: 350px; /* Set a reasonable maximum size for smaller tablets */
+        margin: 20px 0; /* Add some margin top/bottom to prevent sticking to edges */
+    }
+
+    #display {
+        /* Significantly reduce the font size for mobile readability */
+        font-size: 2.5rem; 
+        padding: 15px;
+    }
+
+    #keys {
+        /* Reduce padding inside the keys container */
+        padding: 15px;
+        /* Reduce the space between buttons */
+        gap: 10px; 
+    }
+
+    button {
+        /* Reduce button size to fit 4 across a narrower screen */
+        width: 65px; 
+        height: 65px;
+        border-radius: 32.5px;
+        /* Reduce button font size */
+        font-size: 1.5rem; 
+    }
+}
 
