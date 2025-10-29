@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mainBox">
+
+        <!-- Heading  -->
+         <div class="headName">
+            <p>Rock</p>
+            <p>Paper</p>
+            <p>Scissor</p>
+         </div>
+
+         <!-- choices  -->
+         <div class="choices">
+                <button class="rock choiceBox" onclick="playGame('Rock')">
+                   <p>✊</p>    
+                </button>
+
+                <button class="paper choiceBox" onclick="playGame('Paper')">
+                     <p>✋</p>
+                </button>
+
+                <button class="scissor choiceBox" onclick="playGame('Scissor')">
+                      <p>✂️</p>
+                </button>
+         </div>
+
+         <!-- Choice Display  -->
+         <div class="choiceDisplay">
+             <div class="yourChoice choiceDisplayBox">
+
+                <p>Your Choice</p>
+                <div  class="emojiBox">
+                   <p id="playerEmoji">----</p>
+                </div>
+
+             </div>
+
+             <div class="computerChoice choiceDisplayBox">
+
+                <p>Computer's Choice</p>
+                <div  class="emojiBox">
+                  <p id="computerEmoji">----</p>
+                </div>
+
+             </div>
+         </div>
+
+
+         <!-- Result Display  -->
+         <div class="resultDisp">
+             <p id="resDispText">-----</p>
+         </div>
+
+         <!-- ScoreCard  -->
+         <div class="scoreCard">
+            <p id="playerSc" class="playerScore">Player : 0</p>
+            <p>|</p>
+            <p id="computerSc" class="ComputerScore">Computer : 0</p>
+         </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
